@@ -1,0 +1,150 @@
+<?php
+$booking = [
+  'id' => $id ?? 'N/A',
+  'username' => $username ?? 'Guest',
+  'email' => $email ?? 'Not provided',
+  'origin' => $origin ?? '',
+  'destination' => $destination ?? '',
+  'travel_date' => $travel_date ?? '',
+  'travel_time' => $travel_time ?? '',
+  'seats' => $seats ?? 1
+];
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BlazeBus e-Ticket</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .ticket {
+      width: 700px;
+      margin: 20px auto;
+      background: #fff;
+      border: 2px solid #FFD700;
+      border-radius: 12px;
+      padding: 30px;
+    }
+    .header {
+      background: linear-gradient(to right, #FFD700, #ffec8f);
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header img {
+      height: 60px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #111;
+      font-weight: bold;
+    }
+    .badge {
+      margin: 15px 0;
+      background-color: #FFD700;
+      padding: 8px 16px;
+      border-radius: 20px;
+      display: inline-block;
+      font-weight: bold;
+      color: #111;
+      font-size: 16px;
+    }
+    .section {
+      margin-top: 20px;
+      border-top: 1px dashed #ccc;
+      padding-top: 20px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .info-box {
+      flex: 1 1 45%;
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+    .info-box h4 {
+      margin: 0;
+      font-size: 13px;
+      color: #888;
+    }
+    .info-box p {
+      margin: 5px 0 0;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      text-align: center;
+      color: #555;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+    .emoji {
+      font-size: 16px;
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ticket">
+    <div class="header">
+      <img src="https://i.postimg.cc/DZCgHTC7/newbuslogosec.png" alt="BlazeBus Logo">
+      <h1>BlazeBus e-Ticket 🚌</h1>
+    </div>
+
+    <div class="badge">Ticket ID: <?= $booking['id'] ?></div>
+
+    <div class="section">
+      <div class="row">
+        <div class="info-box">
+          <h4>👤 Passenger Name</h4>
+          <p><?= $booking['username'] ?></p>
+        </div>
+        <div class="info-box">
+          <h4>📧 Email</h4>
+          <p><?= $booking['email'] ?></p>
+        </div>
+        <div class="info-box">
+          <h4>📍 From</h4>
+          <p><?= $booking['origin'] ?></p>
+        </div>
+        <div class="info-box">
+          <h4>🎯 To</h4>
+          <p><?= $booking['destination'] ?></p>
+        </div>
+        <div class="info-box">
+          <h4>📅 Travel Date</h4>
+          <p><?= $booking['travel_date'] ?></p>
+        </div>
+        <div class="info-box">
+          <h4>⏰ Departure Time</h4>
+          <p><?= $booking['travel_time'] ?></p>
+        </div>
+        <div class="info-box">
+          <h4>💺 Seats Booked</h4>
+          <p><?= $booking['seats'] ?></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Thank you for booking with BlazeBus. Have a safe and happy journey!<br>
+      BlazeBus © 2025
+    </div>
+  </div>
+</body>
+</html>

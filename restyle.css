@@ -1,0 +1,746 @@
+.main_row {
+  max-width: 1400px;
+ 
+
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+.navbar {
+  background-color: rgb(255, 255, 255);
+}
+
+
+.book-btn:hover {
+  background-color: transparent;
+  color: black;
+  border: 1px solid rgb(255, 213, 0);
+  padding: 9px 19px;
+  border-radius: 20px;
+  font-weight: 600;
+
+}
+
+.nav-item .nav-link:hover {
+  color: rgb(255, 213, 0);
+  transform: translateY(-2px);
+}
+
+.navbar-toggler {
+  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  /* color: var(--bs-navbar-color); */
+  background-color: transparent;
+  border: none;
+  border-radius: var(--bs-navbar-toggler-border-radius);
+  transition: var(--bs-navbar-toggler-transition);
+}
+
+.nav-item .nav-link {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.nav-item .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  /* adjust as needed */
+  width: 0%;
+  height: 2px;
+  background-color: rgb(255, 213, 0);
+  /* yellow underline */
+  transition: width 0.3s ease;
+}
+
+.nav-item .nav-link:hover::after {
+  width: 100%;
+}
+
+
+@media(max-width:567px) {
+  .nav-item .nav-link {
+    color: black;
+  }
+
+  .navbar-nav {
+    gap: 1px;
+  }
+
+  .navbar-brand img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .book-btn {
+    background-color: rgb(255, 213, 0);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    border: none;
+    transition: 0.2s;
+    margin-right: 10px;
+  }
+
+  .booking-form {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: -160px;
+  }
+
+  .route::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    /* background-image: url('assets/images/background-world-map-removebg-preview.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; */
+    opacity: 0.1;
+    z-index: -1;
+
+  }
+
+  .route {
+    padding: 5% 20px 5% 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .route-title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 24px;
+    margin: 40px 0 20px;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+
+}
+
+@media(min-width:768px) {
+
+  .route {
+    padding: 5%;
+    position: relative;
+    z-index: 1;
+  }
+
+
+  .route::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-image: url('assets/images/background-world-map-removebg-preview.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+
+  }
+
+  .booking-form {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: -80px;
+  }
+
+  .nav-item .nav-link {
+    color: rgb(0, 0, 0);
+  }
+
+  .book-btn {
+    background-color: rgb(255, 213, 0);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    border: none;
+    transition: 0.2s;
+    margin-right: 40px;
+  }
+
+
+  .navbar-nav {
+    gap: 1px;
+  }
+
+  .navbar-nav {
+    gap: 45px;
+  }
+
+  .navbar-brand img {
+    height: 60px;
+    width: auto;
+    padding-left: 40px;
+    object-fit: contain;
+  }
+
+  .banner {
+    background:
+      linear-gradient(to left, rgba(173, 173, 173, 0), rgba(0, 0, 0, 0.879)),
+      /* gradient overlay */
+      url('assets/images/Copilot_2.png');
+    /* background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /* Optional: text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 400px;
+    margin-top: 85px;
+    padding: 5%;
+  }
+
+  .route-title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 34px;
+    margin: 40px 0 20px;
+  }
+
+  .great_us {
+    padding: 5%;
+  }
+
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .section-header h2 {
+
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 20;
+  }
+
+
+}
+
+.offcanvas-title {
+  color: rgb(255, 213, 0);
+  border-bottom: solid 2px black;
+}
+
+
+
+
+.form-label {
+  font-weight: bold;
+}
+
+.submit-btn {
+  background-color: rgb(255, 213, 0);
+  color: black;
+  font-weight: 600;
+  border-radius: 2rem;
+  padding: 12px 40px;
+  border: none;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  border: solid 1px rgb(255, 213, 0);
+  color: black;
+}
+
+.form-select,
+.form-control {
+  height: 50px;
+  border-radius: 0.5rem;
+}
+
+.form-select:focus {
+  border-color: rgb(255, 213, 0);
+  outline: 0;
+  box-shadow: 0px 0px 4px rgba(255, 213, 0, 0.409);
+}
+
+.form-control:focus {
+  border-color: rgb(255, 213, 0);
+  outline: 0;
+  box-shadow: 0px 0px 4px rgba(255, 213, 0, 0.409);
+}
+
+
+
+
+.route-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: transparent;
+  padding: 15px;
+  border-radius: 12px;
+  height: 20vh;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.route-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(255, 213, 0, 0.477);
+}
+
+.route-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.route-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.view-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Animation keyframes */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+#more-routes {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.8s ease, max-height 3s ease;
+}
+
+#more-routes.show {
+  opacity: 1;
+  max-height: 1000px;
+}
+
+#more-routes.show .route-card {
+  animation: fadeSlideUp 0.9s ease forwards;
+  opacity: 0;
+}
+
+/* Staggered delays for slower effect */
+#more-routes.show .route-card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+#more-routes.show .route-card:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+#more-routes.show .route-card:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+/* great section css strat here  */
+
+
+
+.trustpilot {
+  background-color: #ffc10714;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.trustpilot .rating {
+  color: #ffc107;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.trustpilot img {
+  height: 20px;
+  margin-left: 10px;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: start;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: rgb(255, 213, 0);
+  margin-bottom: 15px;
+}
+
+.feature-card h5 {
+  font-weight: 700;
+}
+
+@media (max-width: 576px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .trustpilot {
+    margin-top: 10px;
+  }
+
+  .great_us {
+    padding: 5% 20px;
+  }
+}
+
+
+/* great section end here */
+
+
+/* footer css starts here */
+
+.footer {
+  background-color: #141414;
+  color: #fff;
+  padding: 5%;
+  font-size: 14px;
+}
+
+.footer .nav-tabs .nav-link {
+  color: #fff;
+  border: none;
+  background-color: transparent;
+  flex: 0 0 auto;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.footer .nav-tabs .nav-link.active {
+  background-color: rgb(255, 213, 0);
+  color: #141414;
+  border-radius: 8;
+  font-weight: 600;
+}
+
+.footer .tab-content {
+  margin-top: 20px;
+}
+
+.footer .tab-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer .tab-content ul li {
+  margin-bottom: 12px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.footer-tabs {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-tabs li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.footer-tabs .active {
+  background: rgb(255, 213, 0);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.footer-section {
+  margin-bottom: 40px;
+}
+
+.social-icons span {
+  margin-right: 20px;
+}
+
+.input-group {
+  display: flex;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.input-group button {
+  background: rgb(255, 213, 0);
+  color: black;
+  font-weight: 700;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.badge-new {
+  background-color: red;
+  font-size: 10px;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+.media-contact-box {
+  background-color: #383838;
+  border-radius: 8px;
+  padding: 10px 16px 10px 11px;
+  display: flex;
+  flex-direction: row;
+}
+
+.media-contact-box .ct {
+  text-decoration: none;
+
+}
+
+@media (max-width:567px) {
+  .banner {
+    background:
+      linear-gradient(to left, rgba(173, 173, 173, 0), rgba(0, 0, 0, 0.879)),
+      /* gradient overlay */
+      url('assets/images/Copilot_2.png');
+    /* background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /* Optional: text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 400px;
+    /* margin-top: 85px; */
+    padding: 5% 20px;
+  }
+
+
+  #footerTabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    flex-direction: row !important;
+    width: 100% !important;
+    list-style: none;
+  }
+
+}
+
+.nav-tabs {
+  border: none;
+}
+
+@media(min-width:768px) {
+  .banner_head {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 0.5px;
+  }
+
+  .banner_head span {
+    color: rgb(255, 213, 0);
+    font-size: 45px;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 0.5px;
+  }
+
+  .section-header h2 {
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 20;
+  }
+
+  .foot-brand {
+    height: auto;
+    width: 10%;
+  }
+
+}
+
+@media(max-width:567px) {
+  .foot-brand {
+    height: auto;
+    width: 20%;
+    margin-top: 15px;
+  }
+
+  .banner_head {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 0.5px;
+  }
+
+  .banner_head span {
+    color: rgb(255, 213, 0);
+    font-size: 34px;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 0.5px;
+  }
+
+
+
+}
+
+#routes-container {
+  width: 100%;
+  justify-self: center;
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* CSS rules for tablet devices */
+
+
+  .route-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    height: 33vh;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+  }
+
+  .route-heading {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .feature-icon {
+    font-size: 26px;
+    color: rgb(255, 213, 0);
+    margin-bottom: 10px;
+  }
+
+  .feature-card h5 {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .feature-card p {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .feature-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: start;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 40vh;
+  }
+
+}
+
+.modal-header {
+  background-color: #111;
+  color: white;
+}
+
+
+  /* Enhance select dropdown appearance */
+  select.form-select {
+    background-color: #f8f9fa;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 15px;
+    color: #333;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.2);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  select.form-select:focus {
+    border-color: #ffcc00;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    background-color: #fffef5;
+  }
+
+  /* Label improvement */
+  .form-label {
+    font-weight: 600;
+    color: #444;
+  }
+
+  /* Responsive spacing */
+  .form-control,
+  .form-select {
+    margin-bottom: 10px;
+  }
+
